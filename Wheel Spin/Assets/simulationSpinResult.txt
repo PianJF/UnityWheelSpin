@@ -1,0 +1,10 @@
+Simulate 1000 spins
+
+Life 30 min: 181 times
+Brush 3x: 111 times
+Gems 35: 99 times
+Hammer 3x: 104 times
+Coins 750: 46 times
+Brush 1x: 202 times
+Gems 75: 49 times
+Hammer 1x: 208 times

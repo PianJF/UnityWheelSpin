@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e5334b7d5a18547941177245e5001d, type: 3}
+  m_Name: Prize_Hammer3x
+  m_EditorClassIdentifier: 
+  prizePrefab: {fileID: 8679517246299867812, guid: 9933eafec28216f4ea2d56e4b8600939, type: 3}
+  prizeName: Hammer 3x
