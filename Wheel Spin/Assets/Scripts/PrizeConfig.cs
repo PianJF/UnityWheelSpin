@@ -7,4 +7,7 @@ public class PrizeConfig : ScriptableObject
 {
     [SerializeField] public GameObject prizePrefab;
     [SerializeField] public string prizeName;
+    [SerializeField] public int percentage;
+    [SerializeField] public int index;
 }
+

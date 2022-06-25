@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prizePrefab: {fileID: 352698355876197986, guid: cbba5ffbd495e4b41a867e1dcb13d6c3, type: 3}
   prizeName: Brush 3x
+  percentage: 10
+  index: 1

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prizePrefab: {fileID: 8515478720931888026, guid: d8fc9018c3c00a94ab9da35073ca4e8c, type: 3}
   prizeName: Gems 75
+  percentage: 5
+  index: 6

@@ -4,12 +4,13 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Game : MonoBehaviour
 {
     [SerializeField] Button playBtn;
     [SerializeField] Button claimBtn;
     [SerializeField] GameObject wheel;
-    [SerializeField] List<PrizeConfig> prizeList;
+    [SerializeField] public List<PrizeConfig> prizeList;
     [SerializeField] List<GameObject> prizeContainer;
     [SerializeField] GameObject prize;
     [SerializeField] ParticleSystem prizeEffect;

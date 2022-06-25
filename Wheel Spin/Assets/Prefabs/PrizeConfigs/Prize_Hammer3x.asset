@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prizePrefab: {fileID: 8679517246299867812, guid: 9933eafec28216f4ea2d56e4b8600939, type: 3}
   prizeName: Hammer 3x
+  percentage: 10
+  index: 3

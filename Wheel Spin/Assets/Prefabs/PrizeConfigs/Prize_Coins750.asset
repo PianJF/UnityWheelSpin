@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prizePrefab: {fileID: 2245381967172202151, guid: a0c012a0f0c77404da6d9e92eb8b70b0, type: 3}
   prizeName: Coins 750
+  percentage: 5
+  index: 4

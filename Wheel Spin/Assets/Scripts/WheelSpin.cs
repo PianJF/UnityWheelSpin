@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -11,38 +12,52 @@ public class WheelSpin : MonoBehaviour
     [SerializeField] float xSlowSpinDuration;
 
     public int prizeIndex;
+    List<PrizeConfig> prizeList;
+    List<PrizeConfig> prizePool = new List<PrizeConfig>();
     float fastSpinDegrees;
     float slowSpinDegrees;
     float extraDegrees;
 
-    int CalculatePrizeIndex(float randomNum)
-    {   
-        if(randomNum < 0.2) return 0;
-        else if(0.2 <= randomNum && randomNum < 0.3) return 1;
-        else if(0.3 <= randomNum && randomNum < 0.4) return 2;
-        else if(0.4 <= randomNum && randomNum < 0.5) return 3;
-        else if(0.5 <= randomNum && randomNum < 0.55) return 4;
-        else if(0.55 <= randomNum && randomNum < 0.75) return 5;
-        else if(0.75 <= randomNum && randomNum < 0.8) return 6;
-        else return 7;
+
+    void Start()
+    {
+        prizeList = gameObject.GetComponent<Game>().prizeList;
+        GeneratePrizePool();
     }
 
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
-    void Update()
+    // int CalculatePrizeIndex(float randomNum)
+    // {   
+    //     if(randomNum < 0.2) return 0;
+    //     else if(0.2 <= randomNum && randomNum < 0.3) return 1;
+    //     else if(0.3 <= randomNum && randomNum < 0.4) return 2;
+    //     else if(0.4 <= randomNum && randomNum < 0.5) return 3;
+    //     else if(0.5 <= randomNum && randomNum < 0.55) return 4;
+    //     else if(0.55 <= randomNum && randomNum < 0.75) return 5;
+    //     else if(0.75 <= randomNum && randomNum < 0.8) return 6;
+    //     else return 7;
+    // }
+
+    void GeneratePrizePool()
     {
-        //wheelBoard.transform.Rotate(0, 0, 180 * Time.deltaTime);
+        foreach(PrizeConfig prizeConfig in prizeList)
+        {   
+            prizePool.AddRange(Enumerable.Repeat(prizeConfig, prizeConfig.percentage));
+        }
+    }
+
+    int LookupPrizeIndex(int num)
+    {
+        return prizePool[num].index;
     }
 
     public void Spin()
     {   
         // The wheel will fast spin fisrt then slow spin the last half circle;
-
-        float randomNum = Random.Range(0f, 1f);
-        prizeIndex = CalculatePrizeIndex(randomNum);
+        int randomNum = Random.Range(0, prizePool.Count);
+        prizeIndex = LookupPrizeIndex(randomNum);
         Debug.Log(prizeIndex);
-        extraDegrees = Mathf.Clamp(randomNum, 0.1f, 0.9f)  * -45f; 
+        
+        extraDegrees = Mathf.Clamp(randomNum/prizePool.Count, 0.1f, 0.9f)  * -45f; 
         fastSpinDegrees = -1 * CalculateFastSpinDegrees(prizeIndex);
         slowSpinDegrees = -180f;
 

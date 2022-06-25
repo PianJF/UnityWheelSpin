@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prizePrefab: {fileID: 3126381558638547358, guid: 73084dccad03283488eb18f52e93151c, type: 3}
   prizeName: Life 30 min
+  percentage: 20
+  index: 0
