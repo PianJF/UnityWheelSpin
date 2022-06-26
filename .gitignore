@@ -4,13 +4,13 @@ Wheel Spin/Temp/UnityLockfile
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+/Wheel Spin/[Ll]ibrary/
+/Wheel Spin/[Tt]emp/
+/Wheel Spin/[Oo]bj/
+/Wheel Spin/[Bb]uild/
+/Wheel Spin/[Bb]uilds/
+/Wheel Spin/[Ll]ogs/
+/Wheel Spin/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
